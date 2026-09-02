@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>PocketTray</AssemblyName>
+    <RootNamespace>PocketTray</RootNamespace>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Product>PocketTray</Product>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+
+    <!-- Once x-mark-512.ico exists in this folder, it becomes the exe's own
+         icon (taskbar/Explorer) automatically — no manual edit needed here. -->
+    <ApplicationIcon Condition="Exists('x-mark-512.ico')">x-mark-512.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <!--
+    Also copy it next to the built exe (not just embed it as the exe's icon):
+    TrayApp looks for this file at runtime as the separator tray icon, and it
+    needs to travel with the exe for the "carry the folder anywhere" portable
+    setup to actually bring the custom icon along.
+  -->
+  <ItemGroup Condition="Exists('x-mark-512.ico')">
+    <None Include="x-mark-512.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <!-- Stay a loose file beside the single-file exe: TrayApp reads it from
+           disk at runtime, and bundling it into the exe would hide it. -->
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </None>
+  </ItemGroup>
+
+  <!--
+    Single-file, self-contained publish settings. Scoped to a RID-specific
+    publish (not a plain `dotnet build`/`dotnet run`, which has no
+    RuntimeIdentifier and would fail if these were unconditional) — see the
+    `dotnet publish -r win-x64 ...` command in README.md.
+  -->
+  <PropertyGroup Condition="'$(RuntimeIdentifier)' != ''">
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+  </PropertyGroup>
+
+</Project>

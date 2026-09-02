@@ -1,0 +1,6 @@
+C:\Users\Nihil\Desktop\projectGloria\PocketTray\dist\v1.0.0\PocketTray.exe
+C:\Users\Nihil\Desktop\projectGloria\PocketTray\dist\v1.0.0\x-mark-512.ico
+C:\Users\Nihil\Desktop\projectGloria\PocketTray\dist\v1.0.0\PocketTray.dll
+C:\Users\Nihil\Desktop\projectGloria\PocketTray\dist\v1.0.0\PocketTray.deps.json
+C:\Users\Nihil\Desktop\projectGloria\PocketTray\dist\v1.0.0\PocketTray.runtimeconfig.json
+C:\Users\Nihil\Desktop\projectGloria\PocketTray\dist\v1.0.0\PocketTray.pdb
