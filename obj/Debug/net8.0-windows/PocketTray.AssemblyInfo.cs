@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PocketTray")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6851be9496ad20afedc3bd1f5ef0c7c7d2163602")]
 [assembly: System.Reflection.AssemblyProductAttribute("PocketTray")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PocketTray")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
