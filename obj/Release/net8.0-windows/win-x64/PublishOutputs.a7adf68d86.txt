@@ -1,3 +1,0 @@
-C:\Users\Nihil\Desktop\projectGloria\PocketTray\dist\v1.0.0\x-mark-512.ico
-C:\Users\Nihil\Desktop\projectGloria\PocketTray\dist\v1.0.0\PocketTray.pdb
-C:\Users\Nihil\Desktop\projectGloria\PocketTray\dist\v1.0.0\PocketTray.exe
