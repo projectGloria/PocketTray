@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <linearGradient id="accent-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+
+    <linearGradient id="accent-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <linearGradient id="taskbar-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e222d" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#141720" stop-opacity="0.98" />
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 26px; font-weight: 700; fill: #f3f4f6; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 14px; fill: #9ca3af; }
+    .card-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; fill: #f9fafb; }
+    .card-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #9ca3af; }
+    .menu-item { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #e5e7eb; }
+    .menu-item-dim { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #6b7280; }
+    .tray-time { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #d1d5db; text-anchor: middle; }
+    .badge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #ffffff; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="960" height="480" rx="16" fill="url(#bg-grad)" stroke="#1f2937" stroke-width="1.5" />
+
+  <!-- Ambient Glow Effects -->
+  <circle cx="200" cy="120" r="160" fill="#38bdf8" opacity="0.05" filter="url(#glow-cyan)" />
+  <circle cx="780" cy="180" r="180" fill="#a855f7" opacity="0.06" filter="url(#glow-cyan)" />
+
+  <!-- Header Banner Section -->
+  <g transform="translate(60, 48)">
+    <!-- PocketTray Icon Box -->
+    <rect x="0" y="0" width="56" height="56" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)" />
+    <!-- Stylized X symbol inside icon -->
+    <path d="M18 18 L38 38 M38 18 L18 38" stroke="#38bdf8" stroke-width="4.5" stroke-linecap="round" />
+
+    <text x="72" y="28" class="title">PocketTray Workspace Preview</text>
+    <text x="72" y="48" class="subtitle">Windows Notification Area Organizer • Fast App &amp; Folder Launcher • Animated Tray Icons</text>
+  </g>
+
+  <!-- Top Feature Highlights Cards -->
+  <!-- Card 1: Pin Folders & Apps -->
+  <g transform="translate(60, 130)" filter="url(#shadow)">
+    <rect width="260" height="96" rx="12" fill="url(#card-grad)" stroke="#374151" stroke-width="1" />
+    <circle cx="36" cy="38" r="18" fill="#0284c7" opacity="0.2" />
+    <!-- Folder Icon -->
+    <path d="M26 31 L32 31 L35 34 L46 34 A2 2 0 0 1 48 36 L48 44 A2 2 0 0 1 46 46 L26 46 A2 2 0 0 1 24 44 L24 33 A2 2 0 0 1 26 31 Z" fill="#38bdf8" />
+    <text x="66" y="34" class="card-title">Instant Folder Access</text>
+    <text x="66" y="52" class="card-body">Pin projects, repos, &amp; drives</text>
+    <text x="66" y="68" class="card-body">directly into the Windows tray.</text>
+  </g>
+
+  <!-- Card 2: Smart Focus & Launch -->
+  <g transform="translate(350, 130)" filter="url(#shadow)">
+    <rect width="260" height="96" rx="12" fill="url(#card-grad)" stroke="#374151" stroke-width="1" />
+    <circle cx="36" cy="38" r="18" fill="#059669" opacity="0.2" />
+    <!-- Lightning Bolt / Focus Icon -->
+    <path d="M38 27 L28 39 L35 39 L34 49 L44 37 L37 37 Z" fill="#34d399" />
+    <text x="66" y="34" class="card-title">Smart Window Focus</text>
+    <text x="66" y="52" class="card-body">Brings running apps to front</text>
+    <text x="66" y="68" class="card-body">or launches new instances.</text>
+  </g>
+
+  <!-- Card 3: Animated Tray Icons -->
+  <g transform="translate(640, 130)" filter="url(#shadow)">
+    <rect width="260" height="96" rx="12" fill="url(#card-grad)" stroke="#374151" stroke-width="1" />
+    <circle cx="36" cy="38" r="18" fill="#7c3aed" opacity="0.2" />
+    <!-- Film / GIF animation icon -->
+    <rect x="26" y="30" width="20" height="16" rx="2" fill="none" stroke="#c084fc" stroke-width="2" />
+    <circle cx="31" cy="34" r="1.5" fill="#c084fc" />
+    <circle cx="41" cy="34" r="1.5" fill="#c084fc" />
+    <circle cx="31" cy="42" r="1.5" fill="#c084fc" />
+    <circle cx="41" cy="42" r="1.5" fill="#c084fc" />
+    <text x="66" y="34" class="card-title">Animated GIF Support</text>
+    <text x="66" y="52" class="card-body">Dynamic multi-frame GIF icons</text>
+    <text x="66" y="68" class="card-body">cycling right in your tray.</text>
+  </g>
+
+  <!-- Mockup Context Menu (Floating Dark Theme Context Menu) -->
+  <g transform="translate(560, 246)" filter="url(#shadow)">
+    <rect width="210" height="136" rx="8" fill="#202020" stroke="#3f3f46" stroke-width="1" />
+    <!-- Menu items -->
+    <rect x="6" y="6" width="198" height="28" rx="4" fill="#2d2d30" />
+    <text x="18" y="25" class="menu-item" font-weight="600">Manage Items...</text>
+
+    <text x="18" y="55" class="menu-item">Change PocketTray Icon...</text>
+    <text x="18" y="80" class="menu-item-dim">Reset PocketTray Icon</text>
+
+    <!-- Separator -->
+    <line x1="12" y1="94" x2="198" y2="94" stroke="#333338" stroke-width="1" />
+
+    <text x="18" y="118" class="menu-item" fill="#f87171">Exit PocketTray</text>
+  </g>
+
+  <!-- Windows 11 Taskbar Mockup -->
+  <g transform="translate(60, 396)" filter="url(#shadow)">
+    <!-- Taskbar Container -->
+    <rect width="840" height="54" rx="10" fill="url(#taskbar-grad)" stroke="#2d3342" stroke-width="1.2" />
+
+    <!-- Center Taskbar App Icons (Windows 11 Centered style) -->
+    <g transform="translate(320, 12)">
+      <!-- Windows Logo -->
+      <rect x="0" y="4" width="22" height="22" rx="4" fill="#0078d4" />
+      <path d="M4 8 L10 8 L10 14 L4 14 Z M12 8 L18 8 L18 14 L12 14 Z M4 16 L10 16 L10 22 L4 22 Z M12 16 L18 16 L18 22 L12 22 Z" fill="#ffffff" />
+
+      <!-- Search Icon -->
+      <circle cx="42" cy="15" r="9" fill="#2c3240" />
+      <path d="M40 13 A3 3 0 1 1 43 16 M44 17 L47 20" stroke="#9ca3af" stroke-width="1.5" fill="none" stroke-linecap="round" />
+
+      <!-- Terminal / Code Icons -->
+      <rect x="64" y="5" width="20" height="20" rx="4" fill="#18181b" stroke="#3f3f46" stroke-width="1" />
+      <path d="M68 11 L72 15 L68 19 M74 19 L79 19" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" />
+
+      <rect x="94" y="5" width="20" height="20" rx="4" fill="#007acc" />
+      <path d="M98 12 L104 7 L110 12 L106 15 L110 18 L104 23 L98 18 Z" fill="#ffffff" opacity="0.9" />
+
+      <rect x="124" y="5" width="20" height="20" rx="4" fill="#1e293b" />
+      <circle cx="134" cy="15" r="6" fill="#f59e0b" />
+    </g>
+
+    <!-- System Tray Area (Right Side) -->
+    <g transform="translate(570, 8)">
+      <!-- System Tray background grouping -->
+      <rect x="0" y="4" width="258" height="30" rx="6" fill="#171a22" stroke="#262b37" stroke-width="1" />
+
+      <!-- PocketTray Pin Group -->
+      <g transform="translate(10, 4)">
+        <!-- Pinned App 1: Terminal (with green running indicator bar on left) -->
+        <rect x="0" y="3" width="2" height="16" rx="1" fill="#22c55e" />
+        <rect x="5" y="3" width="16" height="16" rx="3" fill="#18181b" />
+        <path d="M8 8 L11 11 L8 14 M13 14 L17 14" stroke="#e4e4e7" stroke-width="1.2" stroke-linecap="round" />
+
+        <!-- Pinned Folder 1: Repos -->
+        <g transform="translate(28, 3)">
+          <path d="M2 3 L6 3 L8 5 L14 5 A1 1 0 0 1 15 6 L15 13 A1 1 0 0 1 14 14 L2 14 A1 1 0 0 1 1 13 L1 4 A1 1 0 0 1 2 3 Z" fill="#fbbf24" />
+        </g>
+
+        <!-- Pinned App 2: Notes / Docs -->
+        <g transform="translate(50, 3)">
+          <rect x="0" y="0" width="16" height="16" rx="3" fill="#3b82f6" />
+          <line x1="4" y1="4" x2="12" y2="4" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" />
+          <line x1="4" y1="8" x2="12" y2="8" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" />
+          <line x1="4" y1="12" x2="9" y2="12" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" />
+        </g>
+
+        <!-- PocketTray Anchor / Separator Icon (highlighted) -->
+        <g transform="translate(74, 1)">
+          <rect x="0" y="0" width="20" height="20" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1" />
+          <path d="M6 6 L14 14 M14 6 L6 14" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
+        </g>
+
+        <!-- Tooltip / Callout pointing to Anchor -->
+        <line x1="84" y1="0" x2="84" y2="-14" stroke="#38bdf8" stroke-dasharray="2,2" stroke-width="1.5" />
+      </g>
+
+      <!-- Standard Windows System Icons (Volume, Wifi, Battery) -->
+      <g transform="translate(122, 11)" stroke="#9ca3af" stroke-width="1.2" fill="none">
+        <!-- Wifi icon -->
+        <path d="M4 11 A5 5 0 0 1 10 11 M2 8 A8 8 0 0 1 12 8 M6 13 A1 1 0 1 1 8 13" stroke-linecap="round" />
+        <!-- Volume -->
+        <path d="M22 6 L25 6 L28 3 L28 15 L25 12 L22 12 Z M31 6 A5 5 0 0 1 31 12" stroke-linecap="round" />
+      </g>
+
+      <!-- Clock & Date -->
+      <text x="216" y="16" class="tray-time" font-weight="600">09:30</text>
+      <text x="216" y="27" class="tray-time" font-size="10px" fill="#9ca3af">10/26/2026</text>
+    </g>
+  </g>
+</svg>
