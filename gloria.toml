@@ -1,6 +1,6 @@
 id            = "PocketTray"
 name          = "PocketTray"
-version       = "1.0.0"
+version       = "1.0.1"
 main_exe      = "PocketTray.exe"
 icon          = "x-mark-512.ico"
 accent        = "#2dd4bf"
