@@ -1,0 +1,9 @@
+id            = "PocketTray"
+name          = "PocketTray"
+version       = "1.0.0"
+main_exe      = "PocketTray.exe"
+icon          = "x-mark-512.ico"
+accent        = "#2dd4bf"
+description   = "Portable Windows system tray organizer"
+needs_webview2 = false
+data_folders  = []
